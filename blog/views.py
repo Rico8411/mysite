@@ -4,11 +4,12 @@ from django.shortcuts import get_object_or_404
 
 def blog_view(request, cat_name=None, author_name=None):
     posts = Post.objects.filter(status=1)
+    categories = category.objects.all()
     if cat_name:
         posts = posts.filter(category__name=cat_name)
     if author_name:
         posts = posts.filter(author__username=author_name)
-    context = {'posts':posts}
+    context = {'posts':posts, 'categories':categories}
     return render(request, 'blog/blog-home.html', context)
 
 def blog_single(request, pid):
