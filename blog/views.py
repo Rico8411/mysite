@@ -26,7 +26,8 @@ def blog_view(request, cat_name=None, author_name=None):
 
 def blog_single(request, pid):
     post = get_object_or_404(Post, pk=pid, status=1)
-    context = {'post':post}
+    categories = category.objects.all()
+    context = {'post':post, 'categories':categories}
     return render(request, 'blog/blog-single.html', context)
 
 def blog_search(request):
