@@ -2,9 +2,13 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.shortcuts import redirect
 from django.contrib import messages
+from blog.models import Post, category
 
 def index(request):
-    return render(request,'website/index.html')
+    posts = Post.objects.filter(status=1)
+    categories = category.objects.all()
+    context = {'posts': posts, 'categories': categories}
+    return render(request,'website/index.html', context)
 
 def about(request):
     return render(request,'website/about.html')

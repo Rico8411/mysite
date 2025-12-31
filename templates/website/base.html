@@ -118,16 +118,13 @@
 						<div class="row">
 							<div class="col">
 								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Feature</a>
-									</li>
-									<li><a href="#">Services</a>
-									</li>
-									<li><a href="#">Portfolio</a>
-									</li>
+									<li><a href="{% url 'website:index' %}">Home</a></li>
+									<li><a href="{% url 'website:about' %}">About</a></li>
+									<li><a href="{% url 'blog:index' %}">Blog</a></li>
+									<li><a href="{% url 'website:contact' %}">Contact</a></li>
 								</ul>
 							</div>
-							<div class="col">
+							{% comment %} <div class="col">
 								<ul>
 									<li><a href="#">Team</a></li>
 									<li><a href="#">Pricing</a>
@@ -136,7 +133,7 @@
 									<li><a href="#">Contact</a>
 									</li>
 								</ul>
-							</div>
+							</div> {% endcomment %}
 						</div>
 					</div>
 				</div>
