@@ -38,7 +38,7 @@ def blog_single(request, pid):
     
     post = get_object_or_404(Post, pk=pid, status=1)
     categories = category.objects.all()
-    comments = Comment.objects.filter(post=post, approved=True).order_by('-created_date')
+    comments = Comment.objects.filter(post=post, approved=True)
     form = CommentForm()
     context = {'post':post, 'categories':categories, 'comments':comments, 'form':form}
     return render(request, 'blog/blog-single.html', context)
