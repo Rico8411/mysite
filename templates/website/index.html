@@ -9,11 +9,11 @@
 	<div class="container">
 		<div class="row fullscreen align-items-center justify-content-between">
 			<div class="col-lg-6 col-md-6 banner-left">
-				<h6 class="text-white">Away from monotonous life</h6>
-				<h1 class="text-white">Magical Travel</h1>
+				<h6 class="text-white">Welcome to Our Blog</h6>
+				<h1 class="text-white">Stories & Ideas</h1>
 				<p class="text-white">
-					If you are looking at blank cassettes on the web, you may be very confused at the difference in
-					price. You may see some for as low as $.17 each.
+					Discover articles, insights, and stories that inspire, inform, and entertain. 
+					Join us on a journey through words, ideas, and shared experiences.
 				</p>
 
 			</div>
@@ -29,9 +29,8 @@
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-8">
 				<div class="title text-center">
-					<h1 class="mb-10">Popular Destinations</h1>
-					<p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,
-						day.</p>
+					<h1 class="mb-10">Popular Categories</h1>
+					<p>Explore our most popular blog categories. Discover articles and stories that matter most to our readers.</p>
 				</div>
 			</div>
 		</div>
@@ -43,9 +42,9 @@
 						<img class="img-fluid" src="{% static 'img/d1.jpg' %}" alt="">
 					</div>
 					<div class="desc">
-						<a href="#" class="price-btn">$150</a>
-						<h4>Mountain River</h4>
-						<p>Paraguay</p>
+						<a href="{% url 'blog:index' %}" class="price-btn">Read More</a>
+						<h4>Technology</h4>
+						<p>Latest Tech News</p>
 					</div>
 				</div>
 			</div>
@@ -56,9 +55,9 @@
 						<img class="img-fluid" src="{% static 'img/d2.jpg' %}" alt="">
 					</div>
 					<div class="desc">
-						<a href="#" class="price-btn">$250</a>
-						<h4>Dream City</h4>
-						<p>Paris</p>
+						<a href="{% url 'blog:index' %}" class="price-btn">Read More</a>
+						<h4>Lifestyle</h4>
+						<p>Life & Culture</p>
 					</div>
 				</div>
 			</div>
@@ -69,9 +68,9 @@
 						<img class="img-fluid" src="{% static 'img/d3.jpg' %}" alt="">
 					</div>
 					<div class="desc">
-						<a href="#" class="price-btn">$350</a>
-						<h4>Cloud Mountain</h4>
-						<p>Sri Lanka</p>
+						<a href="{% url 'blog:index' %}" class="price-btn">Read More</a>
+						<h4>Creative Writing</h4>
+						<p>Stories & Essays</p>
 					</div>
 				</div>
 			</div>
@@ -87,8 +86,8 @@
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-9">
 				<div class="title text-center">
-					<h1 class="mb-10">Other issues we can help you with</h1>
-					<p>We all live in an age that belongs to the young at heart. Life that is.</p>
+					<h1 class="mb-10">Explore More Topics</h1>
+					<p>Discover diverse content and explore different perspectives on various topics that interest you.</p>
 				</div>
 			</div>
 		</div>
@@ -98,11 +97,12 @@
 					<div class="thumb">
 						<img class="img-fluid" src="{% static 'img/o1.jpg' %}" alt="">
 					</div>
-					<a href="#">
-						<h4>Rent a Car</h4>
+					<a href="{% url 'blog:index' %}">
+						<h4>Technology & Science</h4>
 					</a>
 					<p>
-						The preservation of human life is the ultimate value, a pillar of ethics and the foundation.
+						Stay updated with the latest developments in technology, science, and innovation. 
+						Explore articles that break down complex topics into understandable insights.
 					</p>
 				</div>
 			</div>
@@ -111,11 +111,12 @@
 					<div class="thumb">
 						<img class="img-fluid" src="{% static 'img/o2.jpg' %}" alt="">
 					</div>
-					<a href="#">
-						<h4>Cruise Booking</h4>
+					<a href="{% url 'blog:index' %}">
+						<h4>Lifestyle & Culture</h4>
 					</a>
 					<p>
-						I was always somebody who felt quite sorry for myself, what I had not got compared.
+						Explore lifestyle tips, cultural insights, and stories about daily life, 
+						relationships, and personal growth. Discover content that resonates with your interests.
 					</p>
 				</div>
 			</div>
@@ -124,11 +125,12 @@
 					<div class="thumb">
 						<img class="img-fluid" src="{% static 'img/o3.jpg' %}" alt="">
 					</div>
-					<a href="#">
-						<h4>To Do List</h4>
+					<a href="{% url 'blog:index' %}">
+						<h4>Creative Writing</h4>
 					</a>
 					<p>
-						The following article covers a topic that has recently moved to center stage–at least it seems.
+						Immerse yourself in creative stories, poetry, and essays. 
+						Find inspiration in the art of storytelling and the power of words.
 					</p>
 				</div>
 			</div>
@@ -137,11 +139,12 @@
 					<div class="thumb">
 						<img class="img-fluid" src="{% static 'img/o4.jpg' %}" alt="">
 					</div>
-					<a href="#">
-						<h4>Food Features</h4>
+					<a href="{% url 'blog:index' %}">
+						<h4>Personal Stories</h4>
 					</a>
 					<p>
-						There are many kinds of narratives and organizing principles. Science is driven by evidence.
+						Read personal narratives, experiences, and reflections. 
+						Connect with stories that inspire, motivate, and offer new perspectives on life.
 					</p>
 				</div>
 			</div>
@@ -160,16 +163,16 @@
 		<div class="row align-items-center justify-content-end">
 			<div class="col-lg-6 col-md-12 home-about-left">
 				<h1>
-					Did not find your Package? <br>
-					Feel free to ask us. <br>
-					We‘ll make it for you
+					Want to Share Your Story? <br>
+					Join Our Community <br>
+					And Contribute to the Blog
 				</h1>
 				<p>
-					inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
-					standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the
-					job is beyond reproach. inappropriate behavior is often laughed.
+					We believe in the power of storytelling and the importance of diverse voices. 
+					If you have a story to tell, insights to share, or ideas to discuss, 
+					we'd love to hear from you. Together, we can create meaningful content that resonates with readers.
 				</p>
-				<a href="#" class="primary-btn text-uppercase">request custom price</a>
+				<a href="{% url 'website:contact' %}" class="primary-btn text-uppercase">Contact Us</a>
 			</div>
 			<div class="col-lg-6 col-md-12 home-about-right no-padding">
 				<img class="img-fluid" src="{% static 'img/about-img.jpg' %}" alt="">
@@ -187,7 +190,8 @@
 			<div class="menu-content pb-60 col-lg-9">
 				<div class="title text-center">
 					<h1 class="mb-10">Latest from Our Blog</h1>
-					<p>With the exception of Nietzsche, no other madman has contributed so much to human sanity as has.
+					<p>Stay up to date with our newest articles, stories, and insights. 
+						Discover fresh content and engaging perspectives on topics that matter.
 					</p>
 				</div>
 			</div>
