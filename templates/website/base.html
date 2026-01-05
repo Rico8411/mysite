@@ -65,26 +65,15 @@
 						<li><a href="{% url 'website:index' %}">Home</a></li>
 						<li><a href="{% url 'website:about' %}">About</a></li>
 						<li><a href="{% url 'blog:index' %}">Blog</a></li>
-								
-							
-						</li>
-						{% comment %} <li class="menu-has-children"><a href="">Pages</a>
-							<ul>
-								<li><a href="elements.html">Elements</a>
-								</li>
-								<li class="menu-has-children"><a href="">Level 2 </a>
-									<ul>
-										<li><a href="#">Item
-												One</a>
-										</li>
-										<li><a href="#">Item
-												Two</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li> {% endcomment %}
 						<li><a href="{% url 'website:contact' %}">Contact</a></li>
+						<li class="menu-has-children"><a href="">Accounts</a>
+							<ul>
+								<li><a href="{% url 'accounts:signup' %}">Sign Up</a>
+								</li>
+								<li><a href="{% url 'accounts:login' %}">Login</a></li>
+							</ul>
+						</li>
+						
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
