@@ -26,7 +26,7 @@ def login_view(request):
 
     return render(request, 'accounts/login.html')
 
-@login_required
+@login_required #if user is logged in they can logout
 def logout_view(request):
     logout(request)
     return redirect('/')

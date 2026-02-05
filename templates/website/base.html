@@ -68,7 +68,7 @@
 						<li><a href="{% url 'website:contact' %}">Contact</a></li>
 						{% if request.user.is_authenticated %}
 						<li class="menu-has-children"><a href="">{{request.user.username}}</a>
-							<ul>
+							<ul class="dropdown-menu">
 								{% comment %} <li><a href="#">Profile</a> {% endcomment %}
 								</li>
 								<li><a href="{% url 'accounts:logout' %}">Logout</a></li>
