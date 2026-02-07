@@ -67,7 +67,7 @@
 						<li><a href="{% url 'blog:index' %}">Blog</a></li>
 						<li><a href="{% url 'website:contact' %}">Contact</a></li>
 						{% if request.user.is_authenticated %}
-						<li class="menu-has-children"><a href="">{{request.user.username}}</a>
+						<li class="menu-has-children"><a href="#">{{request.user.username}}</a>
 							<ul class="dropdown-menu">
 								{% comment %} <li><a href="#">Profile</a> {% endcomment %}
 								</li>

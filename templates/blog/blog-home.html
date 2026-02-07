@@ -30,7 +30,7 @@
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    <a href="{% url 'blog:category' cat_name='IT' %}" target="_blank">
 								      <div class="thumb">
 								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/blog/cat-widget1.jpg' %}" alt="">
 								  	  </div>
@@ -47,12 +47,12 @@
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    <a href="{% url 'blog:category' cat_name='Travel' %}" target="_blank">
 								      <div class="thumb">
 								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/blog/cat-widget2.jpg' %}" alt="">
 								  	  </div>
 								      <div class="content-details">
-								        <h4 class="content-title mx-auto text-uppercase">Lifestyle</h4>
+								        <h4 class="content-title mx-auto text-uppercase">Travel</h4>
 								        <span></span>								        
 								        <p>Life, culture, and personal growth</p>
 								      </div>
@@ -64,7 +64,7 @@
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    <a href="{% url 'blog:category' cat_name='Food' %}" target="_blank">
 								      <div class="thumb">
 								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/blog/cat-widget3.jpg' %}" alt="">
 								  	  </div>
