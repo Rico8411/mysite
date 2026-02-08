@@ -1,6 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from blog.models import (Post, category, Comment)
-from django.shortcuts import get_object_or_404
 from django.core.paginator import( Paginator, EmptyPage, PageNotAnInteger)
 from django.contrib import messages
 from blog.forms import CommentForm
@@ -35,6 +34,7 @@ def blog_single(request, pid):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your comment has been submitted successfully')
+            return redirect(request.path)
         else:
             messages.error(request, 'There was an error submitting your comment')
     
