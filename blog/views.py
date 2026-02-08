@@ -4,7 +4,7 @@ from django.core.paginator import( Paginator, EmptyPage, PageNotAnInteger)
 from django.contrib import messages
 from blog.forms import CommentForm
 from django.urls import reverse
-from django.http import HttpResponseRedirect
+
 
 
 def blog_view(request, cat_name=None, author_name=None):
@@ -29,6 +29,13 @@ def blog_view(request, cat_name=None, author_name=None):
 
 
 def blog_single(request, pid):
+
+    post = get_object_or_404(Post, pk=pid, status=1)
+
+    if post.is_special and not request.user.is_authenticated:#
+        messages.warning(request, 'This post is special and you are not authenticated')
+        return redirect(reverse('accounts:login'))
+
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -38,15 +45,13 @@ def blog_single(request, pid):
         else:
             messages.error(request, 'There was an error submitting your comment')
     
-    post = get_object_or_404(Post, pk=pid, status=1)
-    if not post.is_special:
-        categories = category.objects.all()
-        comments = Comment.objects.filter(post=post, approved=True)
-        form = CommentForm()
-        context = {'post':post, 'categories':categories, 'comments':comments, 'form':form}
-        return render(request, 'blog/blog-single.html', context)
-    else:
-        return HttpResponseRedirect(reverse('accounts:login'))
+    
+    categories = category.objects.all()
+    comments = Comment.objects.filter(post=post, approved=True)
+    form = CommentForm()
+    context = {'post':post, 'categories':categories, 'comments':comments, 'form':form}
+    return render(request, 'blog/blog-single.html', context)
+    
 
 def blog_search(request):
     posts = Post.objects.filter(status=1)
