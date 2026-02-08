@@ -3398,10 +3398,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 .post-content-area .single-post .meta-details .tags li {
   display: inline-block;
   font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .post-content-area .single-post .meta-details .tags li a {
   color: #222;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -3424,6 +3429,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 .post-content-area .single-post .comments a {
   color: #777777;
   margin-right: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -3453,8 +3461,29 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 20px 0px;
 }
 
+.post-content-area .single-post .col-lg-12.col-md-12 h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #222222;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5em;
+}
+
+.post-content-area .single-post .col-lg-12.col-md-12 p {
+  font-size: 14px;
+  line-height: 1.625em;
+  color: #777777;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
 .post-content-area .single-post .excert {
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.625em;
+  color: #777777;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
 }
 
 .post-content-area .single-post .primary-btn {
@@ -3859,6 +3888,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #222;
   padding: 7px;
   font-size: 14px;
+  font-family: "Poppins", sans-serif;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
