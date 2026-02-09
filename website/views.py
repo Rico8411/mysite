@@ -20,6 +20,7 @@ def contact(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message has been sent successfully')
+            return redirect(request.path)
         else:
             messages.error(request, 'There was an error sending your message')
     form = ContactForm()
